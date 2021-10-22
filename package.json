@@ -1,32 +1,29 @@
 {
   "name": "@marbin-org/ig-wc-lint",
-  "version": "1.0.1",
+  "version": "1.0.7",
   "description": "componentes de inteligo basados en lint",
   "repository": {
     "type": "git",
     "url": "git@github.com:marbin274/web-component-lint.git"
   },
-  "exports": {
-    ".": "./dist/index.js",
-    "./dist/*": "./dist/*",
-    "./ig-table": "./dist/ig-table.js",
-    "./ig-test": "./dist/ig-test.js"
-  },
   "main": "./dist/index.js",
   "module": "./dist/index.js",
-  "typings": "./dist/index.d.ts",
   "files": [
-    "dist/*.*js.map",
-    "dist/*.*js",
-    "dist/*.d.ts.map",
-    "dist/*.d.ts"
+    "ig-*/**/*.js.map",
+    "ig-*/**/*.js",
+    "ig-*/**/*.d.ts.map",
+    "ig-*/**/*.d.ts",
+    "ig-*/**/*.ts",
+    "index.js"
   ],
   "scripts": {
     "start": "npm run build:watch | npm run serve",
     "build": "tsc",
     "build:prod": "tsc -p tsconfig.prod.json",
     "build:watch": "tsc --watch",
-    "serve": "es-dev-server --app-index index.html --node-resolve --watch --open"
+    "clean": "rimraf ig-*/**/*.{d.ts,d.ts.map,js,js.map}",
+    "serve": "es-dev-server --app-index index.html --node-resolve --watch --open",
+    "preview-npm": "pubview"
   },
   "author": {
     "name": "Marbin Ramirez",

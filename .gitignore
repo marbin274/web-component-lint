@@ -2,8 +2,9 @@ node_modules/
 /dist/
 /test/
 custom-elements.json
-# top level source
-my-element.js
-my-element.js.map
-my-element.d.ts
-my-element.d.ts.map
+*.d.js
+*.d.ts
+*/*.js
+*/*.map
+index.ts
+!*/index.ts

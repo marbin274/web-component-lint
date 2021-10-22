@@ -7,10 +7,12 @@ export class IGTest extends LitElement{
 
     override render() {
         return html`
-          <h1>Hola desde test </h1>
+          <h1>Hola desde testss </h1>
         `;
       }
 }
+
+export default IGTest;
 
 declare global {
     interface HTMLElementTagNameMap {

@@ -15,7 +15,7 @@
   * @csspart button - The button
   */
  @customElement('ig-table')
- export class MyElement extends LitElement {
+ export class IGTable extends LitElement {
    static override styles = css`
      :host {
        display: block;
@@ -41,7 +41,7 @@
      return html`
        <h1>${this.sayHello(this.name)}!</h1>
        <button @click=${this._onClick} part="button">
-         Click Coudddnt: ${this.count}
+         Click Count: ${this.count}
        </button>
        <slot></slot>
      `;
@@ -60,10 +60,12 @@
      return `Hello, ${name}`;
    }
  }
+
+ export default IGTable;
  
  declare global {
    interface HTMLElementTagNameMap {
-     'ig-table': MyElement;
+     'ig-table': IGTable;
    }
  }
  
