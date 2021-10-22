@@ -3,7 +3,7 @@ import { customElement } from "lit/decorators.js";
 
 
 @customElement('ig-test')
-class IGTest extends LitElement{
+export class IGTest extends LitElement{
 
     override render() {
         return html`
