@@ -14,8 +14,8 @@
   * @slot - This element has a slot
   * @csspart button - The button
   */
- @customElement('ig-table')
- export class IGTable extends LitElement {
+ @customElement('ig-contador')
+ export class IGContador extends LitElement {
    static override styles = css`
      :host {
        display: block;
@@ -61,11 +61,11 @@
    }
  }
 
- export default IGTable;
+ export default IGContador;
  
  declare global {
    interface HTMLElementTagNameMap {
-     'ig-table': IGTable;
+     'ig-contador': IGContador;
    }
  }
  

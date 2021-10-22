@@ -3,5 +3,5 @@
   "compilerOptions": {
     "importHelpers": true
   },
-  "include": ["src/*.ts"]
+  "include": ["ig-*/*.ts", "index.ts"],
 }

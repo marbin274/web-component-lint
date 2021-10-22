@@ -1,14 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Inteligo wc</title>
 </head>
+
 <body>
-    <h1>Tests</h1>
+    <style>
+        .cambiar-maximo {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 1rem;
+            padding: 0.5rem;
+            border: 0.0625rem solid rgb(201, 201, 201);
+        }
+
+        .cambiar-maximo__actions {
+            display: flex;
+            flex-direction: row;
+        }
+        .cambiar-maximo__caption {
+            font-size: 12px;
+            margin: 0.2rem 0rem;
+        }
+    </style>
+    <h2>Test component (ig-test)</h2>
     <ig-test></ig-test>
-    <ig-table name="tttt"></ig-table>
+    <h2>Contador component (ig-contador)</h2>
+    <ig-contador name="Marbin"></ig-contador>
+    <h2>Request Posts component (ig-request-pos)</h2>
+    <ig-request-post></ig-request-post>
+    <h2>Tabla component (ig-tabla)</h2>
+    <div class="cambiar-maximo">
+        <span>Máximos items: </span>
+        <div class="cambiar-maximo__actions">
+            <input id="inputMax" type="number" name="max" />
+            <button id="buttonChange" type="button">Cambiar</button>            
+        </div>
+        <span class="cambiar-maximo__caption">*el cambio de valor del máximo se hace desde el index.html</span>
+    </div>
+    <ig-tabla id="ig-table"></ig-tabla>
     <script type="module" src="./index.js"></script>
+    <script>
+        let max = 20;
+        let inputMaxElement, buttonElement, tableElement;
+
+        const handleOnChangeMax = () => {
+            max = inputMaxElement.value;
+            tableElement.setAttribute('max', max);
+        }
+
+        addEventListener('DOMContentLoaded', (event) => {
+            inputMaxElement = document.getElementById("inputMax");
+            buttonElement = document.getElementById("buttonChange");
+            tableElement = document.getElementById('ig-table');
+            buttonElement.addEventListener('click', handleOnChangeMax);
+            inputMaxElement.value = max;
+        });
+    </script>
 </body>
+
 </html>

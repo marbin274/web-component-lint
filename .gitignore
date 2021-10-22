@@ -6,5 +6,5 @@ custom-elements.json
 *.d.ts
 */*.js
 */*.map
-index.ts
+index.js
 !*/index.ts

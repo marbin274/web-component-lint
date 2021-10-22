@@ -27,6 +27,6 @@
       }
     ]
   },
-  "include": ["ig-*/*.ts"],
+  "include": ["ig-*/*.ts", "index.ts"],
   "exclude": []
 }

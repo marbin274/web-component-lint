@@ -7,7 +7,7 @@ export class IGTest extends LitElement{
 
     override render() {
         return html`
-          <h1>Hola desde testss </h1>
+          <h1>Hola mundo! </h1>
         `;
       }
 }
