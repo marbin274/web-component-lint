@@ -1,0 +1,46 @@
+{
+  "name": "@m-ig-wc/lint",
+  "version": "1.0.0",
+  "description": "componentes de inteligo basados en lint",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:marbin274/web-component-lint.git"
+  },
+  "exports": {
+    ".": "./dist/index.js",
+    "./dist/*": "./dist/*",
+    "./ig-table": "./dist/ig-table.js",
+    "./ig-test": "./dist/ig-test.js"
+  },
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "typings": "./dist/index.d.ts",
+  "files": [
+    "dist/*.*js.map",
+    "dist/*.*js",
+    "dist/*.d.ts.map",
+    "dist/*.d.ts"
+  ],
+  "scripts": {
+    "start": "npm run build:watch | npm run serve",
+    "build": "tsc",
+    "build:prod": "tsc -p tsconfig.prod.json",
+    "build:watch": "tsc --watch",
+    "serve": "es-dev-server --app-index index.html --node-resolve --watch --open"
+  },
+  "author": {
+    "name": "Marbin Ramirez",
+    "email": "marbin.027@gmail.com",
+    "url": "https://github.com/marbin274"
+  },
+  "license": "ISC",
+  "dependencies": {
+    "lit": "^2.0.2",
+    "tslib": "^2.3.1"
+  },
+  "devDependencies": {
+    "es-dev-server": "^2.1.0",
+    "ts-lit-plugin": "^1.2.1",
+    "typescript": "^4.4.4"
+  }
+}
