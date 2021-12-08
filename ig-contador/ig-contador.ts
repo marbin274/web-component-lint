@@ -1,21 +1,16 @@
-/**
- * @license
- * Copyright 2019 Google LLC
- * SPDX-License-Identifier: BSD-3-Clause
- */
-
  import {LitElement, html, css} from 'lit';
- import {customElement, property} from 'lit/decorators.js';
- 
- /**
-  * An example element.
-  *
-  * @fires count-changed - Indicates when the count changes
-  * @slot - This element has a slot
-  * @csspart button - The button
-  */
- @customElement('ig-contador')
+ import {
+   customElement, 
+   property,
+  } from 'lit/decorators.js';
+  
+   export const componentName = 'ig-contador';
+export interface IGContadorProps {
+  name: string
+}
+@customElement(componentName)
  export class IGContador extends LitElement {
+   
    static override styles = css`
      :host {
        display: block;
@@ -36,8 +31,8 @@
     */
    @property({type: Number})
    count = 0;
- 
-   override render() {
+
+   override render() {     
      return html`
        <h1>${this.sayHello(this.name)}!</h1>
        <button @click=${this._onClick} part="button">
@@ -62,7 +57,7 @@
  }
 
  export default IGContador;
- 
+
  declare global {
    interface HTMLElementTagNameMap {
      'ig-contador': IGContador;

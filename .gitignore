@@ -8,3 +8,4 @@ custom-elements.json
 */*.map
 index.js
 !*/index.ts
+/storybook-static
