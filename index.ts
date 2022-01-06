@@ -1,5 +1,7 @@
 export { default as IGContador } from './ig-contador';
 export * from './ig-contador';
+export { default as IGCuadroResumen } from './ig-cuadro-resumen';
+export * from './ig-cuadro-resumen';
 export { default as IGTest } from './ig-test';
 export * from './ig-test';
 export { default as IGRequestPosts } from './ig-request-post'

@@ -9,6 +9,35 @@
 
 <body>
     <style>
+        @font-face {
+        font-family: Inter;
+        src: url(./fonts/Inter-Regular.woff);
+        }
+
+        @font-face {
+        font-family: Inter-Bold;
+        src: url(./fonts/Inter-Bold.woff);
+        }
+
+        @font-face {
+        font-family: Inter-Italic;
+        src: url(./fonts/Inter-Italic.woff);
+        }
+
+        @font-face {
+        font-family: Inter-Medium;
+        src: url(./fonts/Inter-Medium.woff);
+        }
+    </style>
+    <style>
+        #ig-cuadro1 .cuadro-resumen.verde .cuadro-resumen__titulo{
+            color: red;
+        }
+    </style>
+    <style>
+        body{
+            font-family: Inter;
+        }
         .cambiar-maximo {
             display: flex;
             flex-direction: column;
@@ -26,6 +55,8 @@
             margin: 0.2rem 0rem;
         }
     </style>
+    <h2>Cuadro resumen</h2>
+    <ig-cuadro-resumen id="ig-cuadro1" titulo="Rendimiento al vencimiento"></ig-cuadro-resumen>
     <h2>Test component (ig-test)</h2>
     <ig-test></ig-test>
     <h2>Contador component (ig-contador)</h2>
@@ -42,7 +73,19 @@
         <span class="cambiar-maximo__caption">*el cambio de valor del máximo se hace desde el index.html</span>
     </div>
     <ig-tabla id="ig-table"></ig-tabla>
+    <hr /> 
+    
     <script type="module" src="./index.js"></script>
+    <script>
+        const cuadroResumentElement = document.getElementById("ig-cuadro1");
+        cuadroResumentElement.variante = "verde";
+        cuadroResumentElement.data = [
+                { atributo: "Plazo contratado", valor: "90 días" },
+                { atributo: "Tasa de interés", valor: "0.2%" },
+                { atributo: "Fecha de vencimiento", valor: "19 de Abri. 2021" },
+                { atributo: "Interés esperado", valor: "$200.00" },
+            ];
+    </script>
     <script>
         let max = 20;
         let inputMaxElement, buttonElement, tableElement;

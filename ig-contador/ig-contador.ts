@@ -5,7 +5,7 @@
   } from 'lit/decorators.js';
   
    export const componentName = 'ig-contador';
-export interface IGContadorProps {
+export interface IProps {
   name: string
 }
 @customElement(componentName)
